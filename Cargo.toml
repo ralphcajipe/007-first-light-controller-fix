@@ -1,0 +1,19 @@
+[package]
+name = "dinput8"
+version = "0.1.0"
+edition = "2021"
+authors = ["Ralph Cajipe <ralphcajipe@gmail.com>"]
+description = "DirectInput8 to XInput controller discovery bridge for 007 First Light on PC"
+license = "MIT"
+repository = "https://github.com/ralphcajipe/007-first-light-controller-fix"
+
+[lib]
+name = "dinput8"
+crate-type = ["cdylib"]
+
+[profile.release]
+opt-level = 2
+lto = true
+codegen-units = 1
+panic = "abort"
+strip = "symbols"
